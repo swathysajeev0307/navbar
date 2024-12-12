@@ -1,0 +1,129 @@
+/* COPYRIGHT (C) 2024 - SWATHYMOL SAJEEV | GNU General Public License v3.0
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, 
+either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful,but WITHOUT ANY WARRANTY; 
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>. */
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: monospace;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    line-height: 1.5;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    font-size: 1.5rem;
+    background-color: #3498db;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.toggleBtn{
+    font-size: 1.5rem;
+    color: #ecf0f1;
+    background: transparent;
+    border-color: transparent;
+    border: none;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.toggleBtn:hover{
+    color: royalblue;
+    transform: rotate(90deg);
+}
+
+.links{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.links a{
+    color: #ecf0f1;
+    text-transform: capitalize;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
+}
+
+.links a:hover{
+    background: #2980b9;
+    color: #fff;
+    padding-left: 1.5rem;
+}
+
+.active{
+    height: 13rem;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .header{
+        padding: 0;
+    }
+
+    .toggleBtn{
+        display: none;
+    }
+
+    .links{
+        height: auto;
+        display: flex;
+    }
+
+    .link a{
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+
+    .link a:hover{
+        padding: 0;
+        background: transparent;
+        color: royalblue;
+        transform: scale(1.2);
+    }
+}
+
+.footer {
+    font-family: sans-serif;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
